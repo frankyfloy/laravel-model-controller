@@ -19,4 +19,4 @@ use App\Http\Controllers\HomeController;
 // });
 
 // Chiamata controller --------- op-1
-Route::get('/', 'HomeController@home');
+Route::get('/', 'HomeController@home')->name('home');
