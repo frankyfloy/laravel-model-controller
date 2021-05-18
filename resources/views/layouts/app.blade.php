@@ -21,9 +21,11 @@
 
         @switch(Route::currentRouteName())
             @case('home')
-                @yield('comics')
+                @yield('home')
                 @break
-
+            @case('movies')
+                @yield('movies')
+                @break
             @default
                 @yield('home')
         @endswitch

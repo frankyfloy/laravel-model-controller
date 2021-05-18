@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MovieController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +21,6 @@ use App\Http\Controllers\HomeController;
 // });
 
 // Chiamata controller --------- op-1
-Route::get('/', 'HomeController@home')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('/movies', 'MovieController@index')->name('movies');

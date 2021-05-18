@@ -1,4 +1,83 @@
 main#home{
     background-color: #1c1c1c;
 
+    .container-main{
+        padding-top: 100px;
+        @include px($pxContentPage);
+        padding-bottom: 25px;
+
+        section#cardSection{
+
+            .currSeries{
+                position: relative;
+                top:-20px;
+                left: 0;
+                width: max-content;
+                @include py(5px);
+                @include px(20px);
+                font-size: 1.8em;
+                font-weight: bold;
+                color: $white;
+                background-color: $blueComics;
+            }
+
+            #consoleCard{
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 10px;
+                li.card{
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 20px;
+                    margin-left: 25px;
+                    background-color: inherit;
+                    border: none;
+
+                    img.card-img{
+                        width: 220px;
+                        height: 220px;
+                        object-fit: cover;
+                        object-position: top;
+                    }
+
+                    .card-body{
+                        width: 220px;
+                        padding-left: 0;
+                        color: $white;
+
+                        p.card-title{
+                            display: inline-block;
+                            font-size: 18px;
+                            // height: 60px;
+                        }
+                        p{
+                            margin: 0;
+                            margin-bottom: 20px;
+                            word-wrap: break-word;
+                            color:  $blueComics;
+                            font-size: 14px;
+
+                            .content-desc{
+                                padding-left: 10px;
+                                color: #e8e8e8;
+                            }
+                        }
+                    }
+                }
+            }
+
+            a.load-more{
+                width: 180px;
+                display: block;
+                @include py(8px);
+                @include mx(auto);
+
+                background-color:  $blueComics;
+                border-radius: 0;
+                color: $white;
+                font-size: 0.8em;
+                font-weight: bold;
+            }
+        }
+    }
 }

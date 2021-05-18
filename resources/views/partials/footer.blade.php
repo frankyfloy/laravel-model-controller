@@ -2,10 +2,10 @@
     <section id="allLink" class="row">
         <div class="cont-lists col-6">
 
-            <div>
+            <div class="linkFoot">
 
                 <div>
-                    <h5>DC COMICS</h5>
+                    <h5>NETFLIX</h5>
                     <ul>
                         <li><a href={{route('home')}}>Home</a></li>
                         <li><a href="#">Movies</a></li>

@@ -1,30 +1,32 @@
 @extends('layouts.app')
 
-@section('comics')
+@section('home')
     <main id="home">
         <div class="container-main">
 
             <section id="cardSection">
-                <h1>{{$prova}}</h1>
                 <div class="currSeries">
-                    Movies
+                    MOVIES
                 </div>
 
-                <?php // TODO: Usarlo per movies ?>
-                {{-- <ol id="consoleCard">
-                    @foreach ($articles as $i => $article)
+                <ol id="consoleCard">
+                    @foreach ($movies as $i => $movie)
                         <li class="card">
-                            <a href="{{route('details',['id' => $i])}}">
-                                <img class="card-img" src="{{$article['thumb']}}" alt="">
+                            <a>
+                                <img class="card-img" src="" alt="">
                                 <div class="card-body">
-                                    <p>{{$article['series']}}</p>
+                                    <p class="card-title">Title : <span class="content-desc">{{$movie['title']}}</p>
+                                    <p>Original Title : <span class="content-desc">{{$movie['original_title']}}</span></p>
+                                    <p>lang : <span class="content-desc">{{$movie['nationality']}}</span></p>
+                                    <p>Date : <span class="content-desc">{{$movie['date']}}</span></p>
+                                    <p>Vote : <span class="content-desc">{{$movie['vote']}}</span></p>
                                 </div>
                             </a>
                         </li>
                     @endforeach
-                </ol> --}}
+                </ol>
 
-                {{-- <a class="load-more btn" type="button" name="button">LOAD MORE</a> --}}
+                <a class="load-more btn" type="button" name="button">LOAD MORE</a>
             </section>
         </div>
     </main>
